@@ -46,7 +46,7 @@ main {
      opacity 0.4s ease-out;
 }
 
-.loader-container active {
+.loader-container .active {
     visibility: visible;
     opacity: 1;
 }
