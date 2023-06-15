@@ -9,18 +9,152 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  background-color: #c4bebe;
-  color: #222222;
+  background-color: #2d7fa5;
+  color: #fffcfc;
   padding: 0 10px;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar h1 {
+  font-size: 40px;
+  margin-left: 20px;
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+}
+.logo img {
+  width: 120px; /* Ajustez la taille du logo selon vos besoins */
+  margin-left: 20px;
+}
+
+.navbar-items ul {
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-items ul li {
+  padding: 14px;
+}
+
+.navbar-items ul li a {
+  text-decoration: none;
+  margin-right: 0;
+  font-family: "Pacifico", cursive;
+  color: #fffcfc;
+  font-size: 18px;
+}
+
+.navbar-items ul li a:hover {
+  color: rgb(114, 103, 103);
+}
+
+.navbar-items .btn {
+  margin-left: auto;
+}
+
+.nav-button {
+  background-color: #4b82ca;
+  padding: 8px;
+  width: 100px;
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-size: 14px;
+  font-weight: 100;
+  border-style: none;
+  border-radius: 4px;
+}
+
+.w-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: #07979c;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  box-shadow: 0 20px 45px -13px #293538;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 45px;
+  font-weight: 100;
+  color: rgb(224, 238, 238);
+}
+p {
+  color: white;
+  font-weight: lighter;
+  margin-left: 20px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+h2{
+  font-family: 'Poppins', sans-serif;
+  margin-top: 40px;
+  font-size: 50px;
+  letter-spacing: 2px;
+  align-items: center;
+}
+
+.connect {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin-top: 60px;
+  font-size: 14px;
+}
+.card {
+  width: 400px;
+  padding: 10px;
+  background-color: #2b92ac;
+  box-shadow: 0 20px 45px -13px #293538;
+  border-radius: 5px;
+  font-family: 'Pacifico', cursive;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.card img{
+  width: 100%;
+  max-height: 250px;
+  border-radius: 5px;
+  background-position: 1005;
+}
 main {
-  max-width: 375px;
-  min-height: 380px;
-  margin: 400px auto 0;
+  max-width: 175px;
+  min-height: 80px;
+  margin-left: 20px ;
   border-radius: 10px;
-  padding: 30px 10px;
-  background-color: #f1f1f1;
+  padding: 10px 10px;
+  background-color: #4b9cdf;
   color: #212121;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -28,58 +162,43 @@ main {
 }
 
 .loader-container {
-    background-color: #f1f1f1;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: 
-    visibility 0.4s ease-out,
-    opacity 0.4s ease-out;
-  }
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s ease-out, opacity 0.4s ease-out;
+}
 
 .loader-container .active {
-    visibility: visible;
-    opacity: 1;
-}
-
-.city-name {
-    font-family: Lato, sans-serif;
-    font-size: 50px;
-    color: #333;
-}
-
-.country-name {
-    font-size: 24px;
-    margin-bottom: 45px;
-    color: #606060;
+  visibility: visible;
+  opacity: 1;
 }
 
 .temperature {
-    font-size: 70px;
-    font-weight: 700;
-    color: #212121;
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .info-icon-container {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .info-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
