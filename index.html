@@ -1,91 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;400;500&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Weather app</title>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo">
-        <h1>anto dev</h1>
-      </div>
-      <div class="navbar-items">
-        <ul>
-          <li><a href="#">Sortir</a></li>
-          <li><a href="#">Dormir</a></li>
-          <li>
-            <a href="#"><button class="nav-button">Connection</button></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <section class="w-container">
-      <div class="container">
-        <h1>Paris</h1>
-        <span>DISCOVERY</span>
-        <span>GUIDE</span>
-      </div>
-      <h2>Discover Paris</h2>
-      <div class="heading">
-        <div class="connect">
-          <div class="card">
-            <img src="ressources/eiifel.jpg" alt="first-jpg" class="pic-connect">
-            <p>Eiffel tower tour</p>
-            
-          </div>
-          <div class="card">
-            <img src="ressources/lepic.jpg" alt="second-jpg" class="pic-connect">
-            <p>Montmatre</p>
-            
-          </div>
-          <div class="card">
-            <img src="ressources/garg.jpg" alt="third-jpg" class="pic-connect">
-            <p>Notre dame</p>
-            
-          </div>
-          <div class="card">
-            <img src="ressources/book.jpg" alt="first-jpg" class="pic-connect">
-            <p>Les quais de Seine</p>
-            
-          </div>
-          <div class="card">
-            <img src="ressources/nemours.jpg" alt="first-jpg" class="pic-connect">
-            <p>Palais royal, le Louvre</p>
-            
-          </div>
-          <div class="card">
-            <img src="ressources/lovre.jpg" alt="first-jpg" class="pic-connect">
-            <p>Visite du Louvre</p>
-            
-          </div>
-          
-        </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;400;500&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Weather app</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>actual weather</h1>
+                <main>
+                    <div class="loader-container active">
+                        <img
+                            src="ressources/browser.svg"
+                            alt="loader"
+                            class="loader"
+                        />
+                    </div>
+                    <p class="error-information"></p>
+                    <div class="info-icon-container">
+                        <img
+                            src="ressources/loader.svg"
+                            alt="info-icon"
+                            class="info-icon"
+                        />
+                    </div>
+                    <p class="temperature"></p>
+                </main>
+            </div>
+            <div class="navbar-items">
+                <ul>
+                    <li><a href="#">Sortir</a></li>
+                    <li><a href="#">Dormir</a></li>
+                    <li>
+                        <a href="#"
+                            ><button class="nav-button">Connection</button></a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="w-container">
+            <div class="welcome">
+                <div class="container">
+                    <h1>Paris</h1>
+                    <span>DISCOVERY</span>
+                    <span>GUIDE</span>
+                </div>
+                <div class="hello">
+                    <h2>Discover Paris</h2>
+                    <span class="discover-text">
+                        Check out 10 fabulous reasons to you should plan a trip
+                        to Paris, including famous attractions, fun things to
+                        do, fantastic shopping, and memorable experiences.
+                        #visitparis #traveltoparis #paristrip
+                    </span>
+                </div>
+            </div>
+            <div class="heading">
+                <div class="connect-header">
+                    <h3>"What's your mood today ?"</h3>
+                </div>
+                <div class="connect">
+                    <div class="card">
+                        <img
+                            src="ressources/eiifel.jpg"
+                            alt="first-jpg"
+                            class="pic-connect"
+                        />
+                        <p>Eiffel tower tour</p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="ressources/lepic.jpg"
+                            alt="second-jpg"
+                            class="pic-connect"
+                        />
+                        <p>Montmatre</p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="ressources/garg.jpg"
+                            alt="third-jpg"
+                            class="pic-connect"
+                        />
+                        <p>Notre dame</p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="ressources/book.jpg"
+                            alt="first-jpg"
+                            class="pic-connect"
+                        />
+                        <p>Les quais de Seine</p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="ressources/nemours.jpg"
+                            alt="first-jpg"
+                            class="pic-connect"
+                        />
+                        <p>Palais royal, le Louvre</p>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="ressources/lovre.jpg"
+                            alt="first-jpg"
+                            class="pic-connect"
+                        />
+                        <p>Visite du Louvre</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      </div>
-    </section>
-    
-    <!-- <section>
-      <main>
-        <p class="title">Actual weather</p>
-        <div class="loader-container active">
-          <img src="ressources/browser.svg" alt="loader" class="loader" />
-        </div>
-        <p class="error-information"></p>
-        <p class="temperature"></p>
-        <div class="info-icon-container">
-          <img src="ressources/loader.svg" alt="info-icon" class="info-icon" />
-        </div>
-      </main>
-    </section> -->
+        <section></section>
 
-    <script src="app.js"></script>
-  </body>
+        <script src="app.js"></script>
+    </body>
 </html>
